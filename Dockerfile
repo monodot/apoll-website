@@ -23,7 +23,7 @@ RUN bundle exec jekyll build
 FROM docker.io/library/nginx:1.23-alpine
 
 COPY --from=jekyll /app/_site /usr/share/nginx/html
-RUN mv /usr/share/nginx/html/nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 # CMD ["nginx", "-g", "daemon off;"]

@@ -40,26 +40,18 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - deploy/
+  - nginx.conf
+  - deploy.sh
+  - Dockerfile
+  - README.md
 
 app:
-  public:
-    base_url: https://p.apoll.app
   admin:
     base_url: https://app.apoll.app
   links:
-    new_poll: https://p.apoll.app/new
-
+    new_poll: https://apoll.app/new
 
 analytics:
   plausible:
